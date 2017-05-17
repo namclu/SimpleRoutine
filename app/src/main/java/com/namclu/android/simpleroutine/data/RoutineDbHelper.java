@@ -18,19 +18,29 @@ public class RoutineDbHelper extends SQLiteOpenHelper {
 
     // String that contains the SQL statement to create the routineS table
     private static final String SQL_CREATE_ROUTINES_TABLE =
-            "CREATE TABLE " + RoutineEntry.TABLE_NAME + "(" + ")";
-
-
+            "CREATE TABLE " + RoutineEntry.TABLE_NAME + "(" +
+                    RoutineEntry._ID + " INTEGER PRIMARY KEY AUTOINCREMENT " +
+                    RoutineEntry.COLUMN_ROUTINE_NAME + " TEXT NOT NULL " +
+                    RoutineEntry.COLUMN_ROUTINE_DATE + " DATE " +
+                    RoutineEntry.COLUMN_ROUTINE_FREQUENCY + " STRING NOT NULL " +
+                    RoutineEntry.COLUMN_ROUTINE_COMPLETED + " INTEGER NOT NULL DEFAULT 0 " +
+                    RoutineEntry.COLUMN_ROUTINE_STREAK + " INTEGER DEFAULT 0);";
 
     public RoutineDbHelper(Context context, String name, SQLiteDatabase.CursorFactory factory, int version) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
     }
 
+    /**
+     * Called when the database is created for the first time.
+     */
     @Override
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
-
+        sqLiteDatabase.execSQL(SQL_CREATE_ROUTINES_TABLE);
     }
 
+    /**
+     * Called when the database needs to be upgraded.
+     */
     @Override
     public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
 
