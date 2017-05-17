@@ -26,7 +26,7 @@ public class RoutineDbHelper extends SQLiteOpenHelper {
                     RoutineEntry.COLUMN_ROUTINE_COMPLETED + " INTEGER NOT NULL DEFAULT 0 " +
                     RoutineEntry.COLUMN_ROUTINE_STREAK + " INTEGER DEFAULT 0);";
 
-    public RoutineDbHelper(Context context, String name, SQLiteDatabase.CursorFactory factory, int version) {
+    public RoutineDbHelper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
     }
 
