@@ -31,13 +31,13 @@ public class RoutinesContract {
         // Name of the routine, Type: STRING
         public static final String COLUMN_ROUTINE_NAME = "routine";
 
-        // Date when the routine occurs, Type: DATE
+        // Date when the routine occurs, Type: STRING
         public static final String COLUMN_ROUTINE_DATE = "date";
 
         // How often the routine occurs, Type: STRING
         public static final String COLUMN_ROUTINE_FREQUENCY = "frequency";
 
-        // Has routine been completed?, Type: BOOLEAN
+        // Has routine been completed?, Type: INTEGER
         public static final String COLUMN_ROUTINE_COMPLETED = "completed";
 
         // Days in a row routine has been completed, Type: INTEGER

@@ -19,11 +19,11 @@ public class RoutineDbHelper extends SQLiteOpenHelper {
     // String that contains the SQL statement to create the routineS table
     private static final String SQL_CREATE_ROUTINES_TABLE =
             "CREATE TABLE " + RoutineEntry.TABLE_NAME + "(" +
-                    RoutineEntry._ID + " INTEGER PRIMARY KEY AUTOINCREMENT " +
-                    RoutineEntry.COLUMN_ROUTINE_NAME + " TEXT NOT NULL " +
-                    RoutineEntry.COLUMN_ROUTINE_DATE + " DATE " +
-                    RoutineEntry.COLUMN_ROUTINE_FREQUENCY + " STRING NOT NULL " +
-                    RoutineEntry.COLUMN_ROUTINE_COMPLETED + " INTEGER NOT NULL DEFAULT 0 " +
+                    RoutineEntry._ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
+                    RoutineEntry.COLUMN_ROUTINE_NAME + " TEXT NOT NULL, " +
+                    RoutineEntry.COLUMN_ROUTINE_DATE + " STRING, " +
+                    RoutineEntry.COLUMN_ROUTINE_FREQUENCY + " STRING NOT NULL, " +
+                    RoutineEntry.COLUMN_ROUTINE_COMPLETED + " INTEGER NOT NULL DEFAULT 0, " +
                     RoutineEntry.COLUMN_ROUTINE_STREAK + " INTEGER DEFAULT 0);";
 
     public RoutineDbHelper(Context context) {
