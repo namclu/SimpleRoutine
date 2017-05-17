@@ -21,8 +21,8 @@ public class RoutineDbHelper extends SQLiteOpenHelper {
             "CREATE TABLE " + RoutineEntry.TABLE_NAME + "(" +
                     RoutineEntry._ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
                     RoutineEntry.COLUMN_ROUTINE_NAME + " TEXT NOT NULL, " +
-                    RoutineEntry.COLUMN_ROUTINE_DATE + " STRING, " +
-                    RoutineEntry.COLUMN_ROUTINE_FREQUENCY + " STRING NOT NULL, " +
+                    RoutineEntry.COLUMN_ROUTINE_DATE + " TEXT, " +
+                    RoutineEntry.COLUMN_ROUTINE_FREQUENCY + " TEXT NOT NULL, " +
                     RoutineEntry.COLUMN_ROUTINE_COMPLETED + " INTEGER NOT NULL DEFAULT 0, " +
                     RoutineEntry.COLUMN_ROUTINE_STREAK + " INTEGER DEFAULT 0);";
 

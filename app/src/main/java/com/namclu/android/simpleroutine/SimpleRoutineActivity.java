@@ -33,7 +33,7 @@ public class SimpleRoutineActivity extends AppCompatActivity {
     }
 
     // Add a Routine to SimpleRoutine database
-    public void insertRoutine() {
+    private void insertRoutine() {
 
         // Get a writable database reference
         mSQLiteDatabase = mDbHelper.getWritableDatabase();
@@ -73,7 +73,7 @@ public class SimpleRoutineActivity extends AppCompatActivity {
     }
 
     // Display the database
-    public void displayDatabase() {
+    private void displayDatabase() {
 
         // Get a readable database reference
         mSQLiteDatabase = mDbHelper.getReadableDatabase();
